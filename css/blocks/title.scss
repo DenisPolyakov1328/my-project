@@ -1,0 +1,10 @@
+.title {
+    font-family: Gagalin-Regular;
+    font-size: 72px;
+    margin-bottom: rem(55px);
+    line-height: 1;
+
+    @include phones {
+        font-size: 50px;
+    }
+}

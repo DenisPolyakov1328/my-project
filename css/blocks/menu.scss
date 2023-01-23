@@ -1,0 +1,74 @@
+.menu {
+    background: url(/images/background/menu-bg.jpg) center center / cover no-repeat;
+    position: relative;
+    color: #fff;
+    display: flex;
+    justify-content: flex-end;
+
+    .menu__title {
+        position: absolute;
+        left: 10%;
+        top: 10%;
+    }
+
+    .menu__list {
+        position: absolute;
+        display: flex;
+        height: 100%;
+        
+        .menu__item {
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+
+            .menu__item-trigger {
+                background-size: cover;
+                background-repeat: no-repeat;
+                height: 100vh;
+                text-decoration: none;
+                color: inherit;
+
+                .menu__item-title {
+                    writing-mode: tb-rl;
+                    transform:rotate(180deg);
+                    height: 100%;
+                    padding: rem(40px) rem(11px) 0 rem(12px);
+                    font-family: Gagalin-Regular;
+                    font-size: rem(40px);
+                }
+            }
+
+            .menu__item-content {
+                overflow: hidden;
+                background-color: #303234;
+                opacity: 0.9;
+                width: 0;
+                transition: all 0.5s ease;
+
+                p {
+                    font-family: Ubuntu-Light;
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .menu__item-active {
+
+            .menu__item-title {
+                color: $yellow;
+            }
+
+            .menu__item-content {
+                width: 540px;
+                padding: rem(60px) rem(35px) 0 rem(35px);
+                transition: all 0.5s ease;
+
+                @include tablets {
+                    width: auto;
+                }
+            }
+        }
+    }
+}
+
+

@@ -1,0 +1,89 @@
+.team-acco__list {
+    height: 50%;
+
+    @include phones {
+        height: 60%;
+    }
+}
+.team-acco__item {
+    color: #fff;
+    font-size: 14px;
+    position: relative;
+    
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    .team-acco__trigger {
+        text-decoration: none;
+        font-family: Gagalin-Regular;
+        letter-spacing: 1px;
+        cursor: pointer;
+        color: inherit;
+        
+        @include tablets {
+            font-size: 24px;
+        }
+
+        &::before {
+            content: url(/images/team/team-marker-down.png);
+            padding-right: rem(10px);
+        }
+
+        
+    }
+
+    .team-acco__content {
+        height: 0;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        margin: 5% 0 5% 5%;
+        transition: height 0.3s ease;
+
+        @include tablets {
+            flex-direction: column;
+            margin-left: 0;
+        }
+
+        .team-acco__text {
+            font-family: Ubuntu-Light;
+            margin-left: 5%;
+
+            @include tablets {
+                margin-left: 0;
+            }
+
+            .team-acco__title {
+                margin-bottom: 5%;
+
+                @include tablets {
+                }
+            }
+        }
+    }
+}
+
+.team-acco__item-active {
+    
+    & .team-acco__trigger {
+        color: $yellow;
+        transition: all 0.5s ease;
+
+        &:before {
+            content: url(/images/team/team-marker-up.png);
+        }
+    }
+    
+    & .team-acco__content {
+        height: 110px;
+
+        @include tablets {
+            height: 200px;
+        }
+    }
+}
+
+
+

@@ -1,0 +1,44 @@
+.team {
+    background: url(/images/background/team-bg.jpg) center center / cover no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.team__container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+    background-color: rgba(50, 53, 55, 0.9);
+    padding: 10% 9% 0 9%;
+    display: flex;
+    flex-direction: column;
+
+    @include tablets {
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0;
+    }
+
+    @include phones {
+        padding: 0 15%;
+    }
+
+    .team__title {
+        color: $yellow
+    }
+    
+}
+
+
+
+
+
+
+
+

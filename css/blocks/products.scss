@@ -1,0 +1,100 @@
+.products {
+    background: url(/images/background/products-bg.jpg) center center / cover no-repeat;
+    position: relative;
+}
+
+.products__container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    @include tablets {
+        flex-direction: column;
+    }
+
+    .products__container-pictures, .product__descr {
+        width: 50%;
+    }
+
+    .products__container-pictures {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+
+        @include tablets {
+            width: 70%;
+            justify-content: space-between;
+            align-items: flex-start;
+            align-content: flex-start;
+        }
+
+        @include phones {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+    }
+
+    .product__descr {
+        padding-left: 20px;
+
+        @include tablets {
+            width: 85%;
+            text-align: center;
+            padding-left: 0;
+        }
+
+        @include phones {
+            width: 100%;
+        }
+        
+        .product__title {
+            color:#fff;
+
+            @include phones {
+                margin-bottom: 38px;
+            }
+        }
+    }
+     
+}
+
+
+
+.product__subtitle {
+    color: #fff;
+    font-family: Ubuntu-Light;
+    font-size: 14px;
+}
+
+.product__price {
+    display: flex;
+    align-items: baseline;
+
+    @include tablets {
+        justify-content: center;
+    }
+
+    .price {
+        font-family: Gagalin-Regular;
+        font-size: 72px;
+        color: $red;
+
+        @include phones {
+            font-size: 50px;
+        }
+
+        span {
+            font-size: 30px;
+            margin-left: 10px;
+
+            @include phones {
+                font-size: 24px;
+            }
+        }
+    }
+
+    button {
+        margin-left: 30px;
+    }
+}

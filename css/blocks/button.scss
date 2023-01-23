@@ -1,0 +1,20 @@
+.button {
+    padding: 10px 16px;
+    border-radius: 5px;
+    background-color: $orange;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: Ubuntu-Medium;
+    font-size: 13px;
+}
+
+.button__reset {
+    color: inherit;
+    padding: rem(13px) rem(16px);
+}
+
+.button__review {
+    background-color: #1f2122;
+    margin-top: rem(18px);
+    padding: rem(13px) rem(16px);
+}

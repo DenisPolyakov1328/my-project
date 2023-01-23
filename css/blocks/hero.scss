@@ -1,0 +1,84 @@
+.hero {
+    background: url(/images/background/hero-bg.jpg) center center / cover no-repeat;
+    position: relative;
+}
+
+.hero__container {
+    height: 100%;
+}
+
+.hero__content {
+    display: flex;
+    align-items: center;
+    flex: .8;
+    width: 100%;
+
+    @include tablets {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 0 19%;
+    }
+
+    @include phones {
+        padding: 0 12%;
+    }
+
+    .hero__content-picture {
+        width: 50%;
+
+        @include tablets {
+            width: 100%;
+        }
+
+        .hero__picture {
+            width: 100%;
+            height: 100%;
+
+            img {
+                max-width: 95%;
+            }
+        }
+    }
+
+    .hero__descr {
+        padding-top: rem(85px);
+        margin-left: rem(12px);
+        width: 50%;
+
+        @include tablets {
+            padding-top: rem(40px);
+            margin-left: 0;
+            width: 100%;
+        }
+
+        .hero__title {
+            color: $yellow;
+
+            @include phones {
+                font-size: 63px;
+                margin-bottom: 38px;
+            }
+        }
+
+        .hero__subtitle {
+            font-family: Lifehuck Medium;
+            font-size: 65px;
+            color: #fff;
+            line-height: 1;
+
+            @include phones {
+                font-size: 42px;
+            }
+        }
+    }
+
+}
+
+
+    
+
+
+
+
+

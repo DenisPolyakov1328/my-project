@@ -1,0 +1,130 @@
+.form {
+    @include tablets {
+        padding: 0 17%;
+    }
+
+    @include phones {
+        padding: 0;
+    }
+}
+
+.form__elem {
+    display: flex;
+    font-family: Ubuntu-Light;
+    font-size: 14px;
+
+    @include tablets {
+        flex-direction: column;
+    }
+
+    .form__column {
+        flex: 1;
+        margin-right: rem(20px);
+
+        @include tablets {
+            margin-right: 0;
+            margin-bottom: 16px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        .form__row {
+            display: flex;
+            margin-bottom: rem(17px);
+        
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            .form__block {
+                flex: 1;
+                margin-right: rem(20px);
+                display: block;
+            
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                &--margin-on-mobile {
+                    @include phones {
+                        margin-right: 0;
+                    }
+                }
+
+                &--hidden-on-mobaile {
+                    @include phones {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .form__text {
+            display: block;
+            margin-bottom: rem(19px);
+        }
+
+        .form__block-title {
+            margin-bottom: rem(7px);
+        }
+
+        .form__input {
+            background: #fff;
+            border-radius: 3px;
+            border: none;
+            padding: 8px 21px;
+            width: 100%;
+            height: rem(36px);
+        
+            &--textaria {
+                resize: none;
+                height: rem(109px);
+        
+            } 
+        }
+
+        .form__payment-radio {
+            margin-right: rem(22px);
+        
+            &:nth-child(3) {
+                margin-right: 0;
+            }
+        }
+
+        .form__buttons {
+            @include phones {
+                text-align: center;
+            }
+        }
+    }
+}
+
+.form__payment {
+    display: flex;
+    margin: rem(27px) 0 rem(20px) (0);
+
+    @include phones {
+        justify-content: center;
+    }
+
+    .form__payment-title {
+        margin-left: 10px;
+    }
+}
+
+// .form__payment-elem:checked {
+//     &+.form__payment-fake {
+//         &:after {
+//             background: url(/images/checked.png) 50% no-repeat transparent;
+//             background-size: contain;
+//             width: 11px;
+//             height: 9px;
+//         }
+//     }
+// }

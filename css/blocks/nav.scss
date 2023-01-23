@@ -1,0 +1,53 @@
+.nav__list {
+    display: flex;
+    align-items: center;
+
+    @include tablets {
+        display: block;
+        text-align: center;
+    }
+}
+
+.nav__item {
+    display: flex;
+    align-items: center;
+    margin-right: rem(15px);
+    cursor: pointer;
+    &:after {
+        content: "";
+        width: 4px;
+        height: 4px;
+        background: #fff;
+        border-radius: 50%;
+        display: block;
+        margin-left: rem(15px);
+    }
+
+    &:last-child {
+        margin-right: 0;
+        &::after {
+            display: none;
+        }
+    }
+
+    @include tablets {
+        display: block;
+        margin: 0 0 30px 0;
+         
+        &::after {
+            content: none;
+        }
+    }
+}
+
+.nav__link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: Ubuntu-Medium;
+    font-size: 13px;
+
+    @include tablets {
+        font-size: 30px;
+    }
+}
