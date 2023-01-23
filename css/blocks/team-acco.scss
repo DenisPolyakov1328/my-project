@@ -27,7 +27,7 @@
         }
 
         &::before {
-            content: url(/images/team/team-marker-down.png);
+            content: url(../images/team/team-marker-down.png);
             padding-right: rem(10px);
         }
 
@@ -72,7 +72,7 @@
         transition: all 0.5s ease;
 
         &:before {
-            content: url(/images/team/team-marker-up.png);
+            content: url(../images/team/team-marker-up.png);
         }
     }
     
